@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable name="editProduct" type="com.example.test.exampletest2.viewmodels.EditProductViewModel"></variable>
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="wrap_content"
+                                                 tools:context=".views.ui.AddFragment" android:id="@+id/frameLayout">
+
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@={editProduct.name}"
+                android:ems="10"
+                android:id="@+id/editText"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="35dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="85dp" android:layout_marginEnd="84dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="32dp"
+                app:layout_constraintBottom_toTopOf="@+id/editText2"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@={editProduct.content}"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_marginTop="31dp"
+                app:layout_constraintTop_toBottomOf="@+id/editText" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="85dp" android:layout_marginEnd="84dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="33dp"
+                app:layout_constraintBottom_toTopOf="@+id/editText3"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="@={editProduct.value}"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:layout_marginTop="17dp"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="85dp" android:layout_marginEnd="84dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="36dp" app:layout_constraintBottom_toTopOf="@+id/button"/>
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button" android:layout_marginTop="19dp"
+                app:layout_constraintTop_toBottomOf="@+id/editText3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="148dp" android:layout_marginEnd="148dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
