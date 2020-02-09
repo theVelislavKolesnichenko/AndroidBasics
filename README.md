@@ -1,18 +1,22 @@
 # AndroidBasics
 
-## 1 Лабораторно упражнение:
-
 [Android Studio](AndroidStudio/README.md)
 
 [Виртуално устройство с Android OS](AndroidVirtualDevice/README.md)
 
 [Структора на проект](ProjectStructure/README.md)
 
+## 1 Лабораторно упражнение:
+
+[Activity](Activity/README.md)
+
+[Layout](Layout/README.md)
+
 [Задачи](Тasks/task1.md)
 
 ## 2 Лабораторно упражнение:
 
-[Андроид activity клас](ActivityIntent/README.md)
+[Intent](Intent/README.md)
 
 [Задачи](Тasks/task2.md)
 
