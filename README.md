@@ -7,7 +7,7 @@
 
 [Виртуално устройство с Android OS](AndroidVirtualDevice/README.md)
 
-[Структора на проект](ProjectStructure/README.md)
+[Структура на проект](ProjectStructure/README.md)
 
 ## 1 Лабораторно упражнение:
 
