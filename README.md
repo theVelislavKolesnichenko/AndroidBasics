@@ -1,5 +1,5 @@
 
-[Присъствен списък](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUOTU2VUVYTElDM1dJQlZLRzk3OTJYTVVYVC4u)
+[Присъствен списък](https://forms.office.com/Pages/ResponsePage.aspx?id=QWmIMYaKk0-PQtFA6uo2rY8g6cMukr1NlbD5t2NQ1mhUOFJXTkxLUVVQSllFUUo0MU9DMllaRE5PVy4u)
 
 # AndroidBasics
 
