@@ -27,3 +27,9 @@ intent.putExtra("objectName", obj);
 ```java
 getIntent().getSerializableExtra("objectName");
 ```
+
+## Извикване на Activity
+
+```
+startActivity(intent);
+```
