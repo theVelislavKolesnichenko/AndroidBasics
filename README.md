@@ -24,7 +24,11 @@
 
 ## 3 Лабораторно упражнение:
 
-Очаквайте скоро ...
+[Parcelable](Serialization)
+
+[Жизнен цикъл на Activity](Activity/LifeCycle.md)
+
+[Задачи](Тasks/task3.md)
 
 ## 4 Лабораторно упражнение:
 
