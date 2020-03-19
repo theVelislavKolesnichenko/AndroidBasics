@@ -159,5 +159,5 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AddapterExamples/BaseAdapterExample)
+[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AdapterExamples/BaseAdapterExample)
 

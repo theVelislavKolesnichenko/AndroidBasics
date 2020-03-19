@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AddapterExamples/ArrayAdapterExample)
+[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AdapterExamples/ArrayAdapterExample)
 
 
 
