@@ -147,5 +147,5 @@ Root Tag ще е: LinearLayout - този таг оказва, че всички
     }
 ```
 
-[Проекта]()
+[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AddapterExamples/BaseAdapterExample)
 
