@@ -12,6 +12,7 @@ ArrayAdapter прави връзка между ArrayList (източник на
 Да се създаде приложение извеждащо списък 
 със степените за оценяване.
 ```
+![createproject](https://user-images.githubusercontent.com/10382663/77059669-fb1fa500-69df-11ea-840f-f415da6feec0.png)
 
 При използването на ArrayAdapter с ListView с клас от стандартния пакет не е нужно да се реализират допълнителни методи.
 
@@ -42,13 +43,13 @@ Root Tag ще е: LinearLayout - този таг оказва, че всички
 
 От палитрата с ресурси изберете TexView и гo провлачете върху изгледа, който създадохте.
 
-![createproject](https://user-images.githubusercontent.com/10382663/77059669-fb1fa500-69df-11ea-840f-f415da6feec0.png)
+![textview](https://user-images.githubusercontent.com/10382663/77059672-fbb83b80-69df-11ea-9e03-dbbee730570f.png)
 
 ## Добавяне на ListView
 
 В аctivity_мain.xml трябва да се добави ListView от палитрата.
 
-![textview](https://user-images.githubusercontent.com/10382663/77059672-fbb83b80-69df-11ea-9e03-dbbee730570f.png)
+![listView](https://user-images.githubusercontent.com/10382663/77051302-bf7ede00-69d3-11ea-8ded-385f16890b37.png)
 
 ## Използване на ArrayAdapter
 
