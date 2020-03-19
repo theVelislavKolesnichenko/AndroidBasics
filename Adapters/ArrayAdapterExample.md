@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
+По подразбиране това вече ще преобразува всеки елемент от масива от данни в изглед, като извиква toString елемента и след това ще присвоява резултата като стойност на TextView( R.id.textView) от изгледа R.layout.item, която се показва като ред за всеки елемент от данни. Ако приложението изисква по-сложен превод между елемент и View тогава вместо ArrayAdapter трябва да създадем персонализиран адаптер.
 
 [Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AdapterExamples/ArrayAdapterExample)
 
