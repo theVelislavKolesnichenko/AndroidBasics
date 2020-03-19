@@ -76,14 +76,14 @@ listView.setAdapter(cheeseAdapter);
 ```java
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {
-    View v = convertView;
-    LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    v = inflater.inflate(R.layout.list_view_items, null);// извлича се обекта на изгледа в които ще се зареждат наните
-    TextView textView = (TextView) v.findViewById(R.id.textView);// извлича текстови изглед по ID
-    ImageView imageView = (ImageView) v.findViewById(R.id.imageView);// извлича изглед на изображение по ID
+    if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item, parent, false);
+        }// извлича се обекта на изгледа в които ще се зареждат наните
+    TextView textView = (TextView) convertView.findViewById(R.id.textView);// извлича текстови изглед по ID
+    ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);// извлича изглед на изображение по ID
     textView.setText(animalList.get(position).getAnimalName());//поставя текст
     imageView.setImageResource(animalList.get(position).getAnimalImage());//поставя снимка по ID от ресурсите на приложението
-    return v;//връща като резултат обекта който трябва да се зареди в ListView елемента
+    return convertView;//връща като резултат обекта който трябва да се зареди в ListView елемента
 }
 ```
 
