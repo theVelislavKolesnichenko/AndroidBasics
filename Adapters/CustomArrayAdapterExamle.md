@@ -141,4 +141,4 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AdapterExamples/CustomArrayAdapterExample)
+[Проекта](https://github.com/theVelislavKolesnichenko/AndroidBasics/tree/master/ExampleProjects/AdapterExamples/CustomArrayAdapter)
