@@ -48,8 +48,6 @@
 
 [Адаптери втора част](Adapters/RecyclerView.md)
 
-[Адаптери втора част](View/CardView.md)
-
 [Задачи](Тasks/task6.md)
 
 ## 7 Лабораторно упражнение:
