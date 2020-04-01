@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_height="wrap_content"
              tools:context=".AddAnimalFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"/>
+            android:layout_height="wrap_content">
 
+        <TextView
+                android:text="Диалог за добавяне"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="59dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="138dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="138dp" android:layout_marginBottom="33dp"
+                app:layout_constraintBottom_toTopOf="@+id/editText"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editText"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="100dp"
+                android:layout_marginBottom="40dp" app:layout_constraintBottom_toTopOf="@+id/editText2"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editText2"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="100dp" android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/editText3"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editText3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="100dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="100dp" android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toTopOf="@+id/button"/>
+        <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="160dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="160dp" android:layout_marginBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

@@ -44,4 +44,9 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalViewHolder> {
     public int getItemCount() {
         return animals.size();
     }
+
+    public void addAnimal(Animal animal) {
+        animals.add(0, animal);
+        notifyItemChanged(0);
+    }
 }
