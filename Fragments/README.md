@@ -143,7 +143,7 @@ public class EditNameDialogFragment extends DialogFragment {
 3. Показване на диалоговия прозорец
 
 ```java
-public class DialogDemoActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
