@@ -25,9 +25,9 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalViewHolder> {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View contactView = inflater.inflate(R.layout.animal_item, parent, false);
+        View canimalView = inflater.inflate(R.layout.animal_item, parent, false);
 
-        return new AnimalViewHolder((contactView));
+        return new AnimalViewHolder(canimalView);
     }
 
     @Override

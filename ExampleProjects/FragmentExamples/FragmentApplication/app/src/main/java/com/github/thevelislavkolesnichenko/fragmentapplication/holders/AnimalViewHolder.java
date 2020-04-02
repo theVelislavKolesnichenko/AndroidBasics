@@ -6,6 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.github.thevelislavkolesnichenko.fragmentapplication.R;
+import com.squareup.picasso.Picasso;
 
 public class AnimalViewHolder extends RecyclerView.ViewHolder {
 
@@ -21,11 +22,7 @@ public class AnimalViewHolder extends RecyclerView.ViewHolder {
     }
 
     public void setImage(String url) {
-       /* if(url.contains("dog")) {
-            this.image.setImageResource(R.drawable.dog);
-        } else {
-            this.image.setImageResource(R.drawable.cat);
-        }*/
+        Picasso.get().load(url).error(R.drawable.farm_animals_vector_cartoons).into(image);
     }
 
     public void setName(String name) {
