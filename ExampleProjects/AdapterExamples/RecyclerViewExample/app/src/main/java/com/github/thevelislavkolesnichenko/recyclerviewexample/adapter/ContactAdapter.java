@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -59,5 +61,14 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactViewHolder> {
     @Override
     public int getItemCount() {
         return contacts.size();
+    }
+
+    public List<Contact> getDataSet() {
+        return contacts;
+    }
+
+    public void UpdateDataSet(List<Contact> contacts) {
+        this.contacts = contacts;
+        notifyDataSetChanged();
     }
 }

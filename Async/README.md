@@ -23,7 +23,7 @@ AsyncTask опростява следният общ процес за дейс�
 
 ```java
 // Типовете, посочени в generic класа, са тип на входните данни, тип на напредъка и тип резултат
-private class DownloadImageAsyncTask extends AsyncTask<String, Progress, Bitmap> {
+public class DownloadImageAsyncTask extends AsyncTask<String, Progress, Bitmap> {
      protected void onPreExecute() {
          // Работи върху UIthread преди doInBackground
          // Подходящ за превключване на видимостта на индикатор за напредък
