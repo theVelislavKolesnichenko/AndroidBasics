@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
     private EditText email, password;
     private Button login, start;
     private TextView message, timer;
+    private ProgressBar progressBar;
+
     private Handler handler;
     private TimerTask timerTask;
 
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
         email = findViewById(R.id.editText);
         password = findViewById(R.id.editText2);
         message = findViewById(R.id.textView);
+        progressBar = findViewById(R.id.progressBar);
 
         login = findViewById(R.id.button);
         login.setOnClickListener(this);
@@ -47,11 +51,6 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
     }
 
     @Override
-    public void OnValidateLogin(boolean isValid) {
-        message.setText(isValid ? "Corrent login" : "Incorrect login");
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button:
@@ -60,7 +59,26 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
             case R.id.button2:
                 runTimerTask();
             break;
+            case R.id.button3:
+                twoRunnable();
+                break;
         }
+    }
+
+    private void twoRunnable() {
+        progressBar.setVisibility(View.VISIBLE);
+        new Thread() {
+            @Override
+            public void run() {
+
+                //login
+                //img
+                //login.start();
+                //img.start();
+                //login.join();
+                //img.join();
+            }
+        }.start();
     }
 
     private void runTimerTask() {
@@ -72,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
     }
 
     private void runLoginTask() {
+        progressBar.setVisibility(View.VISIBLE);
         new Thread() {
             @Override
             public void run() {
@@ -82,10 +101,16 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
                 }
 
                 runOnUiThread(new LoginTask(new User(email.getText().toString(), password.getText().toString()), MainActivity.this));
-
             }
         }.start();
     }
+
+    @Override
+    public void OnValidateLogin(boolean isValid) {
+        message.setText(isValid ? "Corrent login" : "Incorrect login");
+        progressBar.setVisibility(View.INVISIBLE);
+    }
+
 
     @Override
     public void OnSetTimer(int time) {
