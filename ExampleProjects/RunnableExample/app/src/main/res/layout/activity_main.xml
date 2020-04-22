@@ -77,5 +77,6 @@
             app:layout_constraintTop_toBottomOf="@+id/button3" android:layout_marginTop="92dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="181dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="182dp"
-            android:layout_marginBottom="226dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            android:layout_marginBottom="226dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="invisible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

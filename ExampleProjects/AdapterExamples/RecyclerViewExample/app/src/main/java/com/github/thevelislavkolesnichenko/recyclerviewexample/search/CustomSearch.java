@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class CustomSearch implements SearchView.OnQueryTextListener {
 
-    Filter filter;
+    private Filter filter;
 
     public CustomSearch(Filter filter) {
         this.filter = filter;

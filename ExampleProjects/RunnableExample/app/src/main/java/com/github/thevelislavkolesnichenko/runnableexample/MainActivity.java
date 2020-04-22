@@ -13,12 +13,13 @@ import com.github.thevelislavkolesnichenko.runnableexample.listeners.OnValidateL
 import com.github.thevelislavkolesnichenko.runnableexample.models.User;
 import com.github.thevelislavkolesnichenko.runnableexample.tasks.LoginTask;
 import com.github.thevelislavkolesnichenko.runnableexample.tasks.TimerTask;
+import com.github.thevelislavkolesnichenko.runnableexample.tasks.TwoTask;
 
 public class MainActivity extends AppCompatActivity implements OnValidateLoginListener, View.OnClickListener, OnSetTimerListener {
 
     private EditText email, password;
-    private Button login, start;
-    private TextView message, timer;
+    private Button login, start, valid;
+    private TextView message, timer, validate;
     private ProgressBar progressBar;
 
     private Handler handler;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
         password = findViewById(R.id.editText2);
         message = findViewById(R.id.textView);
         progressBar = findViewById(R.id.progressBar);
+        validate = findViewById(R.id.textView3);
 
         login = findViewById(R.id.button);
         login.setOnClickListener(this);
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
 
         start = findViewById(R.id.button2);
         start.setOnClickListener(this);
+
+        valid = findViewById(R.id.button3);
+        valid.setOnClickListener(this);
 
         handler = new Handler();
         timerTask = new TimerTask(this);
@@ -55,10 +60,10 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
         switch (v.getId()) {
             case R.id.button:
                 runLoginTask();
-            break;
+                break;
             case R.id.button2:
                 runTimerTask();
-            break;
+                break;
             case R.id.button3:
                 twoRunnable();
                 break;
@@ -71,12 +76,16 @@ public class MainActivity extends AppCompatActivity implements OnValidateLoginLi
             @Override
             public void run() {
 
-                //login
-                //img
-                //login.start();
-                //img.start();
-                //login.join();
-                //img.join();
+                TwoTask task = new TwoTask();
+                final boolean result = task.Execute();
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressBar.setVisibility(View.INVISIBLE);
+                        validate.setText(result ? "Corrent" : "Incorrect");
+                    }
+                });
             }
         }.start();
     }

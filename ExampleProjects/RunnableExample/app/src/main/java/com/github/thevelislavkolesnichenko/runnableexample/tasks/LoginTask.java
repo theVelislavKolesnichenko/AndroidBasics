@@ -18,11 +18,20 @@ public class LoginTask implements Runnable {
 
     @Override
     public void run() {
-        boolean isEmail = user != null && user.getUsername() != null && !user.getUsername().isEmpty()
-                && Patterns.EMAIL_ADDRESS.matcher(user.getUsername()).matches();
 
-        boolean isValidate = user != null && user.getPassword() != null && !user.getPassword().isEmpty()
-                && Pattern.matches("\\w{2}\\d\\w{2}\\d\\p{Upper}[!,@,#,$,%,&,\\*]\\d\\w{2}\\d\\w\\p{Upper}\\d[!,@,#,$,%,&,\\*]", user.getPassword());
+        boolean isEmail =
+                user != null &&
+                user.getUsername() != null &&
+                !user.getUsername().isEmpty() &&
+                Patterns.EMAIL_ADDRESS.matcher(user.getUsername()).matches();
+
+        boolean isValidate =
+                user != null &&
+                user.getPassword() != null &&
+                !user.getPassword().isEmpty() &&
+                Pattern.matches(
+                        "\\w{2}\\d\\w{2}\\d\\p{Upper}[!,@,#,$,%,&,\\*]\\d\\w{2}\\d\\w\\p{Upper}\\d[!,@,#,$,%,&,\\*]",
+                        user.getPassword());
 
         listener.OnValidateLogin(isEmail && isValidate);
     }

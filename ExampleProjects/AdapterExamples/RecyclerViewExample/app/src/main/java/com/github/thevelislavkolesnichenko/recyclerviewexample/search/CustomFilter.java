@@ -10,9 +10,9 @@ import java.util.List;
 
 public class CustomFilter extends Filter {
 
-    ContactAdapter adapter;
-    List<Contact> contacts;
-    List<Contact> filteredContacts;
+    private ContactAdapter adapter;
+    private List<Contact> contacts;
+    private List<Contact> filteredContacts;
 
     public CustomFilter(ContactAdapter adapter) {
         this.adapter = adapter;
@@ -27,7 +27,8 @@ public class CustomFilter extends Filter {
         } else {
             List<Contact> filteredList = new ArrayList<>();
             for (Contact name : contacts) {
-                if (name.getName().toLowerCase().contains(charSequenceString.toLowerCase())) {
+                if (name.getName().toLowerCase().contains(charSequenceString.toLowerCase()) ||
+                   Long.toString(name.getNumber()).toLowerCase().contains(charSequenceString.toLowerCase())) {
                     filteredList.add(name);
                 }
                 filteredContacts = filteredList;

@@ -1,6 +1,7 @@
 package com.github.thevelislavkolesnichenko.recyclerviewexample;
 
 import android.view.View;
+import android.widget.Filter;
 import android.widget.SearchView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         searchView = findViewById(R.id.searchView);
-        searchView.setOnQueryTextListener(new CustomSearch(new CustomFilter(adapter)));
+        CustomFilter filter = new CustomFilter(adapter);
+        CustomSearch customSearch = new CustomSearch(filter);
+        searchView.setOnQueryTextListener(customSearch);
     }
 }
