@@ -19,6 +19,12 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalViewHolder> {
         this.animals = animals;
     }
 
+    //for(int i = 0; i < getItemCount(); i++)
+    // {
+    //      holder = onCreateViewHolder();
+    //      onBindViewHolder(holder, i);
+    // }
+
     @NonNull
     @Override
     public AnimalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -47,6 +53,6 @@ public class AnimalAdapter extends RecyclerView.Adapter<AnimalViewHolder> {
 
     public void addAnimal(Animal animal) {
         animals.add(0, animal);
-        notifyItemChanged(0);
+        notifyItemInserted(0);
     }
 }

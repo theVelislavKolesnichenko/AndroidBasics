@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="400dp"
+             android:layout_height="wrap_content"
+             tools:context=".AddDialogFragment">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content" android:gravity="center" android:layout_margin="5dp">
+        <TextView
+                android:text="Add Movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView5" android:textAlignment="center"
+                android:textSize="24sp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:weightSum="2">
+            <TextView
+                    android:text="Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editText" android:layout_weight="1" android:text="New Movie TItle"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="2">
+            <TextView
+                    android:text="Genre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView7" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="New Movie Genre"
+                    android:ems="10"
+                    android:id="@+id/editText2" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:weightSum="2">
+            <TextView
+                    android:text="Director"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView8" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="New Movie Director"
+                    android:ems="10"
+                    android:id="@+id/editText3" android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="0" android:weightSum="2">
+            <TextView
+                    android:text="Year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView9" android:layout_weight="1"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:ems="10"
+                    android:id="@+id/editText4" android:layout_weight="1" android:text="2020"/>
+        </LinearLayout>
+        <Button
+                android:text="Add"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/button3"/>
+    </LinearLayout>
+</FrameLayout>
