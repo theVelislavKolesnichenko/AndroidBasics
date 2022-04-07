@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UserAddress</string>
+    <string name="name">Въведете име</string>
+    <string name="next">Напред</string>
+    <string name="back">Назад</string>
+    <string name="street">Улица</string>
+    <string name="city">Град</string>
+    <string name="age">Години</string>
+    <string name="finish">Край</string>
+</resources>

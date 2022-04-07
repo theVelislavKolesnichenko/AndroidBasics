@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UserData</string>
+    <string name="fname">Въведете име</string>
+    <string name="name">Въведете фамилно име</string>
+    <string name="email">Въведете имейл</string>
+    <string name="phone">Въведете телефон</string>
+    <string name="date">Въведете дата на раждане</string>
+    <string name="height">Въведете височина</string>
+    <string name="next">Напред</string>
+
+</resources>
