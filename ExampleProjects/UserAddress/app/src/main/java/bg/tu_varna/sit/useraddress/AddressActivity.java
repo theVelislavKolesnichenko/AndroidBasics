@@ -1,19 +1,31 @@
 package bg.tu_varna.sit.useraddress;
 
 import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import bg.tu_varna.sit.useraddress.actions.OnBackAction;
 import bg.tu_varna.sit.useraddress.core.BaseActivity;
 import bg.tu_varna.sit.useraddress.models.People;
 
-public class AddressActivity extends BaseActivity {
+public class AddressActivity extends BaseActivity /*implements View.OnClickListener*/ {
+
+//    @Override
+//    public void onClick(View v) {
+//        if (v.getId() == next.getId()) {
+//            super.onClick(v);
+//        }
+//        if (v.getId() == back.getId()) {
+//            onBackPressed();
+//        }
+//    }
 
     private TextView displayName;
     private EditText age, street, city;
-    private Button next;
+    private Button next, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +41,15 @@ public class AddressActivity extends BaseActivity {
 
         next = findViewById(R.id.button3);
         next.setOnClickListener(this);
+
+        back = findViewById(R.id.button2);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
+        back.setOnLongClickListener(new OnBackAction());
     }
 
     private String getName() {

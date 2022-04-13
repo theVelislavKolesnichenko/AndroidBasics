@@ -16,8 +16,21 @@
     <Button
             android:text="@string/finish"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/button5"
-            app:layout_constraintStart_toStartOf="@+id/textView3" app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            android:layout_marginBottom="100dp"/>
+            android:layout_height="wrap_content" android:id="@+id/finish"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="100dp" app:layout_constraintStart_toStartOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="@+id/next"/>
+    <Button
+            android:text="@string/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/back"
+            app:layout_constraintEnd_toStartOf="@+id/next" android:layout_marginEnd="112dp"
+            app:layout_constraintStart_toStartOf="@+id/textView3" app:layout_constraintBottom_toTopOf="@+id/finish"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginBottom="48dp"/>
+    <Button
+            android:text="@string/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/next"
+            app:layout_constraintEnd_toEndOf="@+id/textView3" app:layout_constraintBottom_toTopOf="@+id/finish"
+            android:layout_marginBottom="48dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
