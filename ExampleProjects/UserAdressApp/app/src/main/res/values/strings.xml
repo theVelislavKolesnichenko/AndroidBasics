@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Адресни данни</string>
+    <string name="email">Въведете имейл:</string>
+    <string name="next">Напред</string>
+    <string name="back">Назад</string>
+    <string name="start">Начало</string>
+    <string name="name">Въведете име:</string>
+    <string name="address">Въведете адрес:</string>
+    <string name="phone">Въведете телефон:</string>
+</resources>
