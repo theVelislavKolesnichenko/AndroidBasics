@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Магазин за плодове и зеленчуци</string>
+    <string name="next">Следваща стъпка</string>
+    <string name="back">Върни се назад</string>
+    <string name="name">Въведете име на магазин</string>
+    <string name="price">Въведете цена</string>
+    <string name="size">Въведете количество</string>
+    <string name="product">Въведете име на продукт</string>
+</resources>
