@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   tools:context=".CreateInvitationFragment"
+                                                   android:id="@+id/frameLayout3">
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/editTextTextPersonName"
+            android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="50dp" android:minHeight="48dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/editTextNumberSigned"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+            android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent" android:minHeight="48dp"
+            tools:ignore="SpeakableTextPresentCheck" android:text="50"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:id="@+id/editTextTextMultiLine"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."/>
+    <Button
+            android:text="@string/create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button3"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="50dp"
+            android:layout_marginTop="20dp" app:layout_constraintEnd_toStartOf="@+id/button4"
+            android:layout_marginEnd="20dp"/>
+    <Button
+            android:text="@string/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button4"
+            android:layout_marginEnd="100dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="50dp"
+            android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
