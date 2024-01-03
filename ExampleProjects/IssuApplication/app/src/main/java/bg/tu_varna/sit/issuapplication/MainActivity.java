@@ -5,16 +5,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import bg.tu_varna.sit.issuapplication.adapters.IssueAdapter;
 import bg.tu_varna.sit.issuapplication.listeners.OnEditIssueListener;
 import bg.tu_varna.sit.issuapplication.models.Issue;
+import bg.tu_varna.sit.issuapplication.tasks.AddIssueTask;
 import bg.tu_varna.sit.issuapplication.views.AddIssueFragment;
-import bg.tu_varna.sit.issuapplication.views.EditIssueFragment;
 
 public class MainActivity extends AppCompatActivity implements OnEditIssueListener, View.OnClickListener {
 
@@ -25,8 +27,26 @@ public class MainActivity extends AppCompatActivity implements OnEditIssueListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        List<Issue> issueList = new ArrayList<>();
+
+        HandlerThread thread = new HandlerThread("Issues");
+        thread.start();
+
+        Handler handler = new Handler(thread.getLooper());
+        handler.post(new AddIssueTask(this));
+
+        handler.post(
+                new Runnable() {
+                    @Override
+                    public void run() {
+                        new AddIssueTask(MainActivity.this).run();
+                        handler.post(this);
+                    }
+                }
+                );
+
         recyclerView = findViewById(R.id.recyclerView);
-        this.recyclerView.setAdapter(new IssueAdapter(new ArrayList<>()));
+        this.recyclerView.setAdapter(new IssueAdapter(issueList));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         findViewById(R.id.button)
@@ -37,7 +57,12 @@ public class MainActivity extends AppCompatActivity implements OnEditIssueListen
     public void onAddIssue(Issue issue) {
         IssueAdapter adapter = (IssueAdapter) recyclerView.getAdapter();
         if (adapter != null) {
-            adapter.addIssue(issue);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    adapter.addIssue(issue);
+                }
+            });
         }
     }
 
